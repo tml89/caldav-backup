@@ -45,7 +45,7 @@ def main():
 
     for cal in principal.calendars():
         filename = join(destination, f'{cal.name}.ics')
-        with open(filename, 'w') as f:
+        with open(filename, 'w', encoding='utf-8') as f:
             write_calendar(cal, f)
             print(f'Exported events from calendar \'{cal.name}\' to {filename}')
 
